@@ -32,7 +32,7 @@ $ ecr-get-login-password \
 ## Installation
 
 ### Install from releases
-Please see [Releases](https://github.com/releases/ecr-get-login-password/latest).
+Please see [Releases](https://github.com/yacchi/ecr-get-login-password/releases/latest).
 
 ### Install from github
 ```shell script
