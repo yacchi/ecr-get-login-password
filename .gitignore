@@ -1,0 +1,4 @@
+.idea
+*.iml
+.envrc
+ecr-get-login-password
