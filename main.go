@@ -20,8 +20,8 @@ func errorExit(format string, a ...interface{}) {
 }
 
 var (
-	Version  = "v0.0.0"
-	Revision = ""
+	Version  string
+	Revision string
 )
 
 func main() {
@@ -39,7 +39,11 @@ func main() {
 	flag.Parse()
 
 	if version {
-		fmt.Printf("%s version %s(%s)\n", filepath.Base(os.Args[0]), Version, Revision)
+		if Revision != "" {
+			fmt.Printf("%s version %s (%s)\n", filepath.Base(os.Args[0]), Version, Revision)
+		} else {
+			fmt.Printf("%s version %s\n", filepath.Base(os.Args[0]), Version)
+		}
 		os.Exit(0)
 	}
 
