@@ -17,4 +17,4 @@ COPY --from=golang:1.15.6 /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-c
 COPY --from=build /main /ecr-get-login-password
 
 ENV HOME=/
-CMD ["/ecr-get-login-password"]
+ENTRYPOINT ["/ecr-get-login-password"]
