@@ -3,9 +3,9 @@ FROM golang:1.15.6 as build
 WORKDIR /go/src/main
 
 COPY go.mod go.sum ./
-COPY main.go ./
-
 RUN go mod download
+
+COPY main.go ./
 RUN CGO_ENABLED=0 go build -o /main .
 
 FROM scratch
